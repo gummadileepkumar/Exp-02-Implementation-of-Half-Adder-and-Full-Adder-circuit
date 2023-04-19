@@ -38,17 +38,50 @@ If the output is 1, then the led glows.
 Program:
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+```python
+Developed by: Gumma Dileep Kumar
+RegisterNumber: 212222240032 
+```
 */
+#### Half adder:
+```python
+module exp2(a,b,sum,carry);
+input a,b;
+output sum,carry;
+  xor(sum,a,b);
+  and(carry,a,b);
+endmodule
+```
+#### Full adder:
+```python
+module exp3(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum=((a^b)^c);
+assign carry=((a&b)|(b&c)|(c&a));
+endmodule
+```
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
 ### RTL
-### TIMING DIAGRAM
+##### Half adder:
+![model](/exp2.1_digital.png)
+##### Full adder:
+![model](/ex-2.2_digital.png)
+### TIMING DIAGRAM:
 
+##### Half adder:
+![model](/ex-2.3_digital.png)
+##### Full adder:
+![model](/exp-2.4_digital.png)
+### TRUTH TABLE
+##### Half adder:
 
-### TRUTH TABLE 
+![model](/ex-2.5_digital.png)
+##### Full adder:
+![model](/exp-2.6_digital.png) 
 
 ### Result:
+Thus the Implementation of Half Adder and Full Adder circuit are studied and the truth table for different logic gates are verified.
